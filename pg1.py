@@ -24,19 +24,19 @@ with middle:
 with right:
     code3 = st.number_input("Third number", min_value=0)
 
-if "correct_code" not in st.session_state:
-    st.session_state.correct_code = False
+if "activity1" not in st.session_state:
+    st.session_state.activity1 = False
 
 # Button - submit code
 if st.button("Submit Answers"):
     if code1 == 1 and code2 == 2 and code3 == 3:
-        st.session_state.correct_code = True
+        st.session_state.activity1 = True
         st.success("You got it!")
     else:
         st.error("One or more of your numbers are incorrect. Please try again.")
 
 # Follow up question
-if st.session_state.correct_code:
+if st.session_state.activity1:
     st.markdown("---")
     st.write("One more thing before we move to the next task. Please answer the question below.")
     st.write("What information should NOT be included in the A3 header?")
