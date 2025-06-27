@@ -12,23 +12,25 @@ st.markdown("Using the diagram and information provided below, determine the mis
 
 st.image("pg2pic.jpg", width=600)
 
-answerQ2 = st.number_input("Enter your answer below", min_value=0.0, step=0.1)
+answerQ2 = st.number_input("Enter your answer below (ANSWER IS 3)", min_value=0.0, step=0.1)
 
-if "activity1" not in st.session_state:
-    st.session_state.activity1 = False
+if "activity2" not in st.session_state:
+    st.session_state.activity2 = False
 
 # Button - submit code
-if st.button("Submit Answers"):
+if st.button("Submit Answers", type="primary"):
     if answerQ2 == 3:
-        st.session_state.activity1 = True
+        st.session_state.activity2 = True
         st.success("You got it!")
     else:
         st.error("Your answer is incorrect. Please try again.")
 
 # Follow up question
-if st.session_state.activity1:
+if st.session_state.activity2:
     st.markdown("---")
     st.write("Please note: *insert statement about current condition*")
+    if st.button("PROCEED TO NEXT TASK", type="primary"):
+            st.switch_page("pg3.py")
     
 
 

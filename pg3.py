@@ -8,5 +8,22 @@ if st.button("Return to Home Page"):
 
 
 st.markdown("### TASK 3: BREAKDOWN")
+st.markdown("TBD")
 
+if "activity3" not in st.session_state:
+    st.session_state.activity3 = False
 
+# Button - submit code
+if st.button("Submit Answers", type="primary"):
+    if True:
+        st.session_state.activity3 = True
+        st.success("You got it!")
+    else:
+        st.error("Your answer is incorrect. Please try again.")
+
+# Follow up question
+if st.session_state.activity3:
+    st.markdown("---")
+    st.write("Please note: *insert statement about break down problem*")
+    if st.button("PROCEED TO NEXT TASK", type="primary"):
+            st.switch_page("pg4.py")

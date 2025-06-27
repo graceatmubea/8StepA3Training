@@ -28,7 +28,7 @@ if "activity1" not in st.session_state:
     st.session_state.activity1 = False
 
 # Button - submit code
-if st.button("Submit Answers"):
+if st.button("Submit Answers", type="primary"):
     if code1 == 1 and code2 == 2 and code3 == 3:
         st.session_state.activity1 = True
         st.success("You got it!")
@@ -51,7 +51,7 @@ if st.session_state.activity1:
 
     if headerQ1 == answerQ1:
         st.success("You are correct! Click the button below to move to the next task.")
-        if st.button("CONTINUE MISSION", type="primary"):
+        if st.button("PROCEED TO NEXT TASK", type="primary"):
             st.switch_page("pg2.py")
     elif headerQ1 == None:
         st.markdown("Please select an answer")
