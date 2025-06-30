@@ -12,7 +12,7 @@ if st.button(label="Return to Home Page", key=None, help=None, type="secondary",
 st.markdown("# TASK 1: HEADER")
 st.write("When you've finished arranging the pieces into their proper sections in front of you, please enter the corresponding code into the boxes below.")
 
-st.markdown("#### Enter the secret code below:")
+st.markdown("#### Enter the secret code below: (ANSWER IS 1,2,3)")
 
 left, middle, right = st.columns([3, 3, 3], vertical_alignment="top")
 
