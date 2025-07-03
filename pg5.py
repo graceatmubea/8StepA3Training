@@ -40,6 +40,7 @@ st.markdown("---")  # Horizontal line
 
 st.markdown("### Direct Cause")
 st.markdown("Pick the most direct cause.")
+st.selectbox()
 
 st.markdown("---")  # Horizontal line
 

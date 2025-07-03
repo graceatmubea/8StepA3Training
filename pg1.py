@@ -41,7 +41,7 @@ if st.session_state.activity1:
     st.write("One more thing before we move to the next task. Please answer the question below.")
     st.write("What information should NOT be included in the A3 header?")
 
-    answerQ1 = "Coach's Date of Birth"
+    answerP1Q1 = "Coach's Date of Birth"
     headerQ1 = st.radio(
         "What information should NOT be included in the A3 header?",
         ["Project Owner's Name", "Coach's Date of Birth",
@@ -49,7 +49,7 @@ if st.session_state.activity1:
         index=None, key="header_Q1"
     )
 
-    if headerQ1 == answerQ1:
+    if headerQ1 == answerP1Q1:
         st.success("You are correct! Click the button below to move to the next task.")
         if st.button("PROCEED TO NEXT TASK", type="primary"):
             st.switch_page("pg2.py")

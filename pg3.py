@@ -10,12 +10,43 @@ if st.button("Return to Home Page"):
 st.markdown("### TASK 3: BREAKDOWN")
 st.markdown("Quiz Style - 5 multiple choice questions")
 
+answerP3Q1 = st.pills(
+    "Q1",
+    options=["a1","a2","a3"],
+    selection_mode="single"
+)
+answerP3Q2 = st.pills(
+    "Q2",
+    options=["b1","b2","b3"],
+    selection_mode="single"
+)
+answerP3Q3 = st.pills(
+    "Q3",
+    options=["c1","c2","c3"],
+    selection_mode="single"
+)
+answerP3Q4 = st.pills(
+    "Q4",
+    options=["d1","d2","d3"],
+    selection_mode="single",
+)
+answerP3Q5 = st.pills(
+    "Q5",
+    options=["e1","e2","e3"],
+    selection_mode="single",
+)
+
 if "activity3" not in st.session_state:
     st.session_state.activity3 = False
 
 # Button - submit code
 if st.button("Submit Answers", type="primary"):
-    if True:
+    #boolean to test Q1-Q5 for correctness
+    boolP3 = False
+    if answerP3Q1 == "a3" and answerP3Q2 == "b1" and answerP3Q3 == "c2":
+         boolP3 = True
+
+    if boolP3:
         st.session_state.activity3 = True
         st.success("You got it!")
     else:

@@ -12,14 +12,14 @@ st.markdown("Using the diagram and information provided below, determine the mis
 
 st.image("pg2pic.jpg", width=600)
 
-answerQ2 = st.number_input("Enter your answer below (ANSWER IS 3)", min_value=0.0, step=0.1)
+answerP2Q1 = st.number_input("Enter your answer below (ANSWER IS 3)", min_value=0.0, step=0.1)
 
 if "activity2" not in st.session_state:
     st.session_state.activity2 = False
 
 # Button - submit code
 if st.button("Submit Answers", type="primary"):
-    if answerQ2 == 3:
+    if answerP2Q1 == 3:
         st.session_state.activity2 = True
         st.success("You got it!")
     else:
