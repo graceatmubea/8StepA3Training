@@ -26,4 +26,4 @@ if st.session_state.activity4:
     st.markdown("---")
     st.write("Please note: *insert statement about Target Setting*")
     if st.button("PROCEED TO NEXT TASK", type="primary"):
-            st.switch_page("pg4.py")
+            st.switch_page("pg5.py")
