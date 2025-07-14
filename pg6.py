@@ -36,3 +36,6 @@ with col7:
     st.write("Total")
     st.write("11")
     st.write("6")
+
+#ADD THE PART ABOUT SENTENCE STRUCTURE
+
