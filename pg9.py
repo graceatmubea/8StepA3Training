@@ -26,3 +26,25 @@ answerP9Q3 = st.pills(
     selection_mode="single"
 )
 
+if "activity9" not in st.session_state:
+    st.session_state.activity9 = False
+
+# Button - submit code
+if st.button("Submit Answers", type="primary"):
+    #boolean to test Q1-Q5 for correctness
+    boolP9 = False
+    if True:
+         boolP9 = True
+
+    if boolP9:
+        st.session_state.activity9 = True
+        st.success("You got it!")
+    else:
+        st.error("Your answer is incorrect. Please try again.")
+
+# Follow up question
+if st.session_state.activity9:
+    st.markdown("---")
+    st.write("Please note: *insert statement about break down problem*")
+    if st.button("COMPLETE MISSION", type="primary"):
+            st.switch_page("pgEnd.py")
