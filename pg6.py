@@ -37,5 +37,41 @@ with col7:
     st.write("11")
     st.write("6")
 
-#ADD THE PART ABOUT SENTENCE STRUCTURE
+
+
+
+
+if "activity6" not in st.session_state:
+    st.session_state.activity6 = False
+
+# Button - submit code
+if st.button("Submit Answers", type="primary"):
+    if True:
+        st.session_state.activity6 = True
+        st.success("You got it!")
+    else:
+        st.error("One or more of your numbers are incorrect. Please try again.")
+
+# Follow up question
+if st.session_state.activity6:
+    st.markdown("---")
+    st.write("One more thing before we move to the next task. Please answer the question below.")
+    st.write("What information should NOT be included in the A3 header?")
+
+    answerP6Q1 = "Coach's Date of Birth"
+    headerQ1 = st.radio(
+        "What information should NOT be included in the A3 header?",
+        ["Project Owner's Name", "Coach's Date of Birth",
+         "Project Start & End Date", "Project Area/Location"],
+        index=None, key="header_Q1"
+    )
+
+    if headerQ1 == answerP6Q1:
+        st.success("You are correct! Click the button below to move to the next task.")
+        if st.button("PROCEED TO NEXT TASK", type="primary"):
+            st.switch_page("pg2.py")
+    elif headerQ1 == None:
+        st.markdown("Please select an answer")
+    else:
+        st.error("Incorrect. Please try again.")
 

@@ -6,6 +6,17 @@ st.set_page_config(page_title="Batch Job", layout="centered")
 if st.button("Return to Home Page"):
     st.switch_page("pgTitle.py")
 
+#initialize session states
+if "activity5a" not in st.session_state:
+        st.session_state.activity5a = False
+
+if "activity5b" not in st.session_state:
+        st.session_state.activity5b = False
+
+if "activity5c" not in st.session_state:
+        st.session_state.activity5c = False
+
+
 
 st.markdown("### TASK 5: ROOT CAUSE ANALYSIS")
 st.markdown("##### Fishbone Diagram")
