@@ -2,7 +2,7 @@ import streamlit as st
 
 
 # Set up the Streamlit page
-st.set_page_config(page_title="Activity 3", layout="centered")
+st.set_page_config(page_title="Monitor Results", layout="centered")
 if st.button("Return to Home Page"):
     st.switch_page("pgTitle.py")
 
@@ -13,7 +13,7 @@ st.markdown("*Picture of Chart 1*")
 st.markdown("*Picture of Chart 2*")
 st.markdown("*Picture of Chart 3*")
 
-st.markdown("Looking at the 3 different results displayed above, decide whether each project is able to be closed (yes/no). Why? ")
+st.markdown("Looking at the 3 different results displayed above, decide whether each project is able to be closed. Why? ")
 st.markdown(" Use words from the wordbank provided below in your 1-2 sentence explanation.")
 
 

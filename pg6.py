@@ -2,42 +2,73 @@ import streamlit as st
 
 
 # Set up the Streamlit page
-st.set_page_config(page_title="Batch Job", layout="centered")
+st.set_page_config(page_title="Develop Countermeasures", layout="wide")
 if st.button("Return to Home Page"):
     st.switch_page("pgTitle.py")
 
 st.markdown("### TASK 6: DEVELOP COUNTERMEASURES")
 
-col1, col2, col3, col4, col5, col6, col7 = st.columns(7)
-with col1:
-    st.write("1")
-    st.number_input("1")
-    
-with col2:
-    st.write("2")
-    st.number_input("2")
+#HEADER ROW
+col1r1, col2r1, col3r1, col4r1, col5r1, col6r1, col7r1 = st.columns([8,2,2,2,2,2,1], vertical_alignment="bottom")
+with col1r1:
+    st.write("**Countermeasure**")
+with col2r1:
+    st.write("**Current Safety Risk**")
+with col3r1:
+    st.write("**ROI**")
+with col4r1:
+    st.write("**Easy Implementation**")
+with col5r1:
+    st.write("**Effectiveness**")
+with col6r1:
+    st.write("**Quick Implementation**")
+with col7r1: 
+    st.write("**Total**")
 
-with col3:
-    st.write("ROI")
-    st.number_input("3")
-
-with col4:
-    st.write("4")
-    st.number_input("4")
-
-with col5:
-    st.write("5")
-    st.number_input("5")
-
-with col6:
-    st.write("6")
-
-with col7: 
-    st.write("Total")
-    st.write("11")
-    st.write("6")
-
-
+#TABLE
+col1r2, col2r2, col3r2, col4r2, col5r2, col6r2, col7r2 = st.columns([8,2,2,2,2,2,1], vertical_alignment="center")
+with col1r2:
+    st.write("Create and implement a preventative maintenance checklist for Tube Bender")
+    st.write("Calibrate and replace bending tools (clamps and gauge) on a fixed schedule")
+    st.write("Assign owndership of maintenance tasks to a specific technician")
+    st.write("Add visual controls to track PM status (e.g. magnetic tags or board indicators)")
+    st.write("Add Tube Bender #2 to SAP PM schedule with automated reminders")
+with col2r2:
+    st.markdown("2")
+    st.markdown("1")
+    st.number_input("", value=None, label_visibility="collapsed", key=1)
+    st.markdown("0")
+    st.markdown("1")
+with col3r2:
+    st.markdown("3")
+    st.markdown("3")
+    st.markdown("2")
+    st.markdown("2")
+    st.markdown("2")
+with col4r2:
+    st.number_input("", value=None, label_visibility="collapsed", key=3)
+    st.markdown("2")
+    st.markdown("3")
+    st.markdown("3")
+    st.markdown("2")
+with col5r2:
+    st.markdown("3")
+    st.markdown("3")
+    st.markdown("2")
+    st.markdown("2")
+    st.number_input("", value=None, label_visibility="collapsed", key=4)
+with col6r2:
+    st.markdown("3")
+    st.markdown("2")
+    st.markdown("3")
+    st.number_input("", value=None, label_visibility="collapsed", key=5)
+    st.markdown("1")
+with col7r2: 
+    st.markdown("14")
+    st.number_input("", value=None, label_visibility="collapsed", key=6)
+    st.markdown("11")
+    st.markdown("10")
+    st.markdown("9")
 
 
 

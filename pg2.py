@@ -2,7 +2,7 @@ import streamlit as st
 
 
 # Set up the Streamlit page
-st.set_page_config(page_title="Activity 2", layout="centered")
+st.set_page_config(page_title="Current Condition", layout="centered")
 if st.button("Return to Home Page"):
     st.switch_page("pgTitle.py")
 
@@ -19,7 +19,7 @@ if "activity2" not in st.session_state:
 
 # Button - submit code
 if st.button("Submit Answers", type="primary"):
-    if answerP2Q1 == 10.5:
+    if answerP2Q1 == 2.5:
         st.session_state.activity2 = True
         st.success("You got it!")
     else:
@@ -28,7 +28,7 @@ if st.button("Submit Answers", type="primary"):
 # Follow up question
 if st.session_state.activity2:
     st.markdown("---")
-    st.write("Please note: *insert statement about current condition*")
+    st.write(":dart: Measurable data, graphs, or photos of the issue should be included in the current condition to make it useful.")
     if st.button("PROCEED TO NEXT TASK", type="primary"):
             st.switch_page("pg3.py")
     

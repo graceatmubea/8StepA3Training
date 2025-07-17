@@ -9,3 +9,5 @@ st.title("COMPLETE.")
 
 st.markdown("Congratulations on completing the training. We thank you for your hard work and effort throughout this mission. Your next mission is to take what you've learned and apply to your future A3 missions.")
 st.subheader("Good luck agent!")
+
+st.balloons()

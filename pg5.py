@@ -2,7 +2,7 @@ import streamlit as st
 
 
 # Set up the Streamlit page
-st.set_page_config(page_title="Batch Job", layout="centered")
+st.set_page_config(page_title="Root Cause Analysis", layout="centered")
 if st.button("Return to Home Page"):
     st.switch_page("pgTitle.py")
 
@@ -39,23 +39,17 @@ st.code(p5code1, language=None)
 
 col1, col2, col3, col4, col5, col6 = st.columns(6)
 with col1:
-    man = st.number_input("Man", value=None, step=0, key=0)
-    
+    man = st.number_input("Man", value=None, step=0, key=0)    
 with col2:
     method = st.number_input("Method", value=None, step=0, key=1)
-
 with col3:
     material = st.number_input("Material", value=None, step=0, key=2)
-
 with col4:
     machine = st.number_input("Machine", value=None, step=0, key=3)
-
 with col5:
     environment = st.number_input("Environment", value=None, step=0, key=4)
-
 with col6:
     management = st.number_input("Management", value=None, step=0, key=5)
-
 
 
 if "activity5a" not in st.session_state:
@@ -75,8 +69,7 @@ if st.session_state.activity5a:
     st.markdown("---")  # Horizontal line
 
     st.markdown("### Direct Cause")
-    st.markdown("Pick the most direct cause.")
-    answerP5Q2 = st.selectbox("label",
+    answerP5Q2 = st.selectbox("Identify the most direct cause.",
                  ["Setup steps not followed consistently",
                   "Inconsistent tube positioning",
                   "Poor lighting around bender station",

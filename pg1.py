@@ -2,7 +2,7 @@ import streamlit as st
 
 
 # Set page title
-st.set_page_config(page_title="Activity 1", layout="centered")
+st.set_page_config(page_title="Header", layout="centered")
 
 if st.button(label="Return to Home Page", key=None, help=None, type="secondary", icon=None,
              disabled=False, use_container_width=False):
