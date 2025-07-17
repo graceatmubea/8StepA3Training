@@ -9,19 +9,24 @@ if st.button("Return to Home Page"):
 
 st.markdown("### TASK 8: MONITOR RESULTS")
 
-st.image("pg8pic1")
-st.image("pg8pic2")
-st.image("pg8pic3")
-
-st.markdown("Looking at the 3 different results displayed above, decide whether each project is able to be closed. Why? ")
-st.markdown(" Use words from the wordbank provided below in your 1-2 sentence explanation.")
+st.markdown("Looking at the 3 different scenarios below, decide whether each project is able to be closed. Why?")
+st.markdown("*Use keywords from the wordbank provided below in your 1-2 sentence explanation.*")
 
 
 st.markdown(":blue-badge[Baseline] :green-badge[Improvement] :violet-badge[Implementation] :orange-badge[Standard]")
 
-st.text_area("Scenario 1", height=68)
-st.text_area("Scenario 2", height=68)
-st.text_area("Scenario 3", height=68)
+tab1, tab2, tab3 = st.tabs(["Scenario 1", "Scenario 2", "Scenario 3"])
+with tab1:
+    st.image("pg8pic1.png")
+    st.text_area("Scenario 1")
+with tab2:
+    st.image("pg8pic2.png")
+    st.text_area("Scenario 2")
+with tab3:
+    st.image("pg8pic3.png")
+    st.text_area("Scenario 3")
+
+st.divider()
 
 st.markdown("To check your answers, please show them to the training proctor for verification.")
 
@@ -40,7 +45,7 @@ if st.button("Submit Answers", type="primary"):
 # Follow up question
 if st.session_state.activity8:
     st.markdown("---")
-    st.write("Please note: *insert statement about current condition*")
+    st.write("Please note: *insert statement about monitor results*")
     if st.button("PROCEED TO NEXT TASK", type="primary"):
             st.switch_page("pg9.py")
 

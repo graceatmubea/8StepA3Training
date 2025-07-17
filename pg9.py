@@ -10,20 +10,32 @@ if st.button("Return to Home Page"):
 st.markdown("### TASK 9: STANDARDIZE & SHARE")
 st.markdown("Quiz Style - 3 multiple choice questions")
 
-answerP9Q1 = st.pills(
-    "Q1",
-    options=["a1","a2","a3"],
-    selection_mode="single"
+answerP9Q1 = "To ensure improvements are sustained over time"
+pg9Q1 = st.radio(
+    "1. What is the goal of the Standardization step in the A3 process?",
+    ["To test different hypotheses",
+    "To ensure improvements are sustained over time",
+    "To collect scrap data",
+    "To assign a new budget"],
+    index=None, key="pg9Q1"
 )
-answerP9Q2 = st.pills(
-    "Q2",
-    options=["b1","b2","b3"],
-    selection_mode="single"
+answerP9Q2 = "Work Instruction"
+pg9Q2 = st.radio(
+    "2. Which of the following is an example of a standardization document?",
+    ["Brainstorming Sheet",
+    "A3 Summary Sheet",
+    "5 Why's Analysis",
+    "Work Instruction"],
+    index=None, key="pg9Q2"
 )
-answerP9Q3 = st.pills(
-    "Q3",
-    options=["c1","c2","c3"],
-    selection_mode="single"
+answerP9Q3 = "The Point of Occurrence (PoO) of the defect"
+pg9Q3 = st.radio(
+    "3. Why is it important to update the PFMEA after implementing improvements?",
+    ["To inform the HR department",
+    "To comply with marketing requirements",
+    "To reflect updated risks and controls in the process",
+    "To reduce training time"],
+    index=None, key="pg9Q3"
 )
 
 if "activity9" not in st.session_state:
@@ -32,15 +44,28 @@ if "activity9" not in st.session_state:
 # Button - submit code
 if st.button("Submit Answers", type="primary"):
     #boolean to test Q1-Q5 for correctness
-    boolP9 = False
-    if True:
-         boolP9 = True
+    boolX = False
+    boolY = False
+    boolZ = False 
+    
+    
+    if pg9Q1 == answerP9Q1:
+        boolX = True
+    else:
+         st.error("Question 1 is incorrect.")
+    if pg9Q2 == answerP9Q2:
+        boolY = True
+    else:
+         st.error("Question 2 is incorrect.")
+    if pg9Q3 == answerP9Q3:
+        boolZ = True
+    else:
+         st.error("Question 3 is incorrect.")
 
-    if boolP9:
+    if boolX and boolY and boolZ:
         st.session_state.activity9 = True
         st.success("You got it!")
-    else:
-        st.error("Your answer is incorrect. Please try again.")
+
 
 # Follow up question
 if st.session_state.activity9:
