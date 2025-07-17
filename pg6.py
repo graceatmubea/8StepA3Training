@@ -6,6 +6,15 @@ st.set_page_config(page_title="Develop Countermeasures", layout="wide")
 if st.button("Return to Home Page"):
     st.switch_page("pgTitle.py")
 
+
+#INITIALIZE
+if "activity6b" not in st.session_state:
+    st.session_state.activity6b = False
+
+if "activity6a" not in st.session_state:
+    st.session_state.activity6a = False
+
+#START PAGE
 st.markdown("### TASK 6: DEVELOP COUNTERMEASURES")
 
 #HEADER ROW
@@ -36,7 +45,7 @@ with col1r2:
 with col2r2:
     st.markdown("2")
     st.markdown("1")
-    st.number_input("", value=None, label_visibility="collapsed", key=1)
+    st.number_input("", value=None, step=0, label_visibility="collapsed", key=1)
     st.markdown("0")
     st.markdown("1")
 with col3r2:
@@ -46,7 +55,7 @@ with col3r2:
     st.markdown("2")
     st.markdown("2")
 with col4r2:
-    st.number_input("", value=None, label_visibility="collapsed", key=3)
+    st.number_input("", value=None, step=0, label_visibility="collapsed", key=3)
     st.markdown("2")
     st.markdown("3")
     st.markdown("3")
@@ -56,53 +65,64 @@ with col5r2:
     st.markdown("3")
     st.markdown("2")
     st.markdown("2")
-    st.number_input("", value=None, label_visibility="collapsed", key=4)
+    st.number_input("", value=None, step=0, label_visibility="collapsed", key=4)
 with col6r2:
     st.markdown("3")
     st.markdown("2")
     st.markdown("3")
-    st.number_input("", value=None, label_visibility="collapsed", key=5)
+    st.number_input("", value=None, step=0, label_visibility="collapsed", key=5)
     st.markdown("1")
 with col7r2: 
     st.markdown("14")
-    st.number_input("", value=None, label_visibility="collapsed", key=6)
+    st.number_input("", value=None, step=0, label_visibility="collapsed", key=6)
     st.markdown("11")
     st.markdown("10")
     st.markdown("9")
 
 
-
-if "activity6" not in st.session_state:
-    st.session_state.activity6 = False
-
 # Button - submit code
 if st.button("Submit Answers", type="primary"):
     if True:
-        st.session_state.activity6 = True
+        st.session_state.activity6a = True
         st.success("You got it!")
     else:
         st.error("One or more of your numbers are incorrect. Please try again.")
 
 # Follow up question
-if st.session_state.activity6:
+if st.session_state.activity6a:
     st.markdown("---")
     st.write("One more thing before we move to the next task. Please answer the question below.")
-    st.write("What information should NOT be included in the A3 header?")
+    #st.write("What information should NOT be included in the A3 header?")
 
-    answerP6Q1 = "Coach's Date of Birth"
-    headerQ1 = st.radio(
-        "What information should NOT be included in the A3 header?",
-        ["Project Owner's Name", "Coach's Date of Birth",
-         "Project Start & End Date", "Project Area/Location"],
-        index=None, key="header_Q1"
+    answerP6Q1 = "It must directly attack the root cause"
+    pg6Q1 = st.radio(
+        "What makes a countermeasure effective?",
+        ["It must be clearly visible on the A3", "It must directly attack the root cause",
+         "It must be the fastest to implement", "All of the above"],
+        index=None, key="pg6Q1"
     )
 
-    if headerQ1 == answerP6Q1:
+    if pg6Q1 == answerP6Q1:
         st.success("You are correct! Click the button below to move to the next task.")
-        if st.button("PROCEED TO NEXT TASK", type="primary"):
-            st.switch_page("pg2.py")
-    elif headerQ1 == None:
+        if st.button("PROCEED TO NEXT TASK", type="primary", key="pg6B1"):
+            st.session_state.activity6b = True
+    elif pg6Q1 == None:
         st.markdown("Please select an answer")
     else:
         st.error("Incorrect. Please try again.")
 
+if st.session_state.activity6b:
+    message = ''':warning: STOP! :warning: *There's something important hidden in this room... To keep it hidden from enemy spies, we can only give you a clue*.  
+    Use this clue to find the secret intel **essential** for the next task and the code needed to continue.'''
+    st.warning(message)
+    p5code1 = '''
+    TOP SECRET: Classified intel isn't visible to the untrained eye. Locate the secret where two walls meet.
+    '''
+    st.code(p5code1, language=None)
+
+    pg6Code = st.number_input("Enter the code on the back of the hint below.", value=None, step=0)
+
+    if pg6Code == 1916:
+        st.success("*Good work agents. We knew you would find it. Make sure to write down or take a picture of the information you found!*")
+        if st.button("PROCEED TO NEXT TASK", type="primary", key="pg6B2"):
+            st.switch_page("pg7.py")

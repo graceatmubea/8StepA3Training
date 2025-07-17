@@ -75,11 +75,9 @@ if st.session_state.activity5a:
                   "Poor lighting around bender station",
                   "Calibration tool worn out",
                   "Lack of clear ownership",
-                  "Scratches or dents affect positioning"]
+                  "Scratches or dents affect positioning"], index=None
                 )
-
-    if "activity5b" not in st.session_state:
-        st.session_state.activity5b = False
+    
     # Button - submit code
     if st.button("Submit Answers", key="5b", type="primary"):
 
@@ -108,14 +106,13 @@ if st.session_state.activity5b:
     st.markdown("Order these statements in the correct order.")
 
 
-    why3 = st.selectbox("Because they haven't been inspected or replaced in a long time", [1,2,3,4,5])
-    why2 = st.selectbox("Because the clamps are damaged and the calibration tool is worn out", [1,2,3,4,5])
-    why5 = st.selectbox("Because there is no preventative maintenance plan for Tube Bender #2, including calibration tools and clamps", [1,2,3,4,5])
-    why1 = st.selectbox("Because the bending equipment is not applying the correct force or angle", [1,2,3,4,5])
-    why4 = st.selectbox("Because there's no scheduled preventative maintenance for this equipment", [1,2,3,4,5])
+    why3 = st.selectbox("Because they haven't been inspected or replaced in a long time", [1,2,3,4,5], index=None)
+    why2 = st.selectbox("Because the clamps are damaged and the calibration tool is worn out", [1,2,3,4,5], index=None)
+    why5 = st.selectbox("Because there is no preventative maintenance plan for Tube Bender #2, including calibration tools and clamps", [1,2,3,4,5], index=None)
+    why1 = st.selectbox("Because the bending equipment is not applying the correct force or angle", [1,2,3,4,5], index=None)
+    why4 = st.selectbox("Because there's no scheduled preventative maintenance for this equipment", [1,2,3,4,5], index=None)
 
-    if "activity5c" not in st.session_state:
-        st.session_state.activity5c = False
+
     # Button - submit code
     if st.button("Submit Answers", key="5c", type="primary"):
 
@@ -127,6 +124,6 @@ if st.session_state.activity5b:
 
 if st.session_state.activity5c:
     st.markdown("---")
-    st.write("Please note: *insert statement about Root Cause Analysis*")
+    st.write(":exclamation: A root cause and a symptom are **NOT** the same! A sympton is the visible effect, and the root cause is the underlying reason for the problem.")
     if st.button("PROCEED TO NEXT TASK", type="primary"):
             st.switch_page("pg6.py")

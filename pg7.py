@@ -22,7 +22,6 @@ if "activity7" not in st.session_state:
         st.session_state.activity7 = False
     # Button - submit code
 if st.button("Submit Answers", key="7", type="primary"):
-
     if True:
         st.session_state.activity7 = True
         st.success("You got it!")

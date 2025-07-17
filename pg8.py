@@ -9,9 +9,9 @@ if st.button("Return to Home Page"):
 
 st.markdown("### TASK 8: MONITOR RESULTS")
 
-st.markdown("*Picture of Chart 1*")
-st.markdown("*Picture of Chart 2*")
-st.markdown("*Picture of Chart 3*")
+st.image("pg8pic1")
+st.image("pg8pic2")
+st.image("pg8pic3")
 
 st.markdown("Looking at the 3 different results displayed above, decide whether each project is able to be closed. Why? ")
 st.markdown(" Use words from the wordbank provided below in your 1-2 sentence explanation.")
@@ -25,7 +25,7 @@ st.text_area("Scenario 3", height=68)
 
 st.markdown("To check your answers, please show them to the training proctor for verification.")
 
-answerP8Q1 = st.number_input("Enter the code to move on to the final task: (answer is 123)", )
+answerP8Q1 = st.number_input("Enter the code to move on to the final task: (answer is 123)", value=None, step=0)
 if "activity8" not in st.session_state:
     st.session_state.activity8 = False
 
