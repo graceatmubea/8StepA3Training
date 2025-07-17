@@ -17,31 +17,44 @@ if "activity5c" not in st.session_state:
         st.session_state.activity5c = False
 
 
-
+#begin page
 st.markdown("### TASK 5: ROOT CAUSE ANALYSIS")
-st.markdown("##### Fishbone Diagram")
-st.write("image")
 
-st.markdown("Given the wordbank and the diagram above, enter the corresponding answer.")
+#FISHBONE
+st.markdown("Given the statement bank and the diagram below, enter the statement number into the corresponding box.")
+st.markdown("##### Fishbone Diagram")
+st.image("pg5pic.png")
+
+st.markdown("##### Statement Bank")
+p5code1 = '''
+Statement 1: Setup steps not followed consistently
+Statement 2: Inconsistent tube positioning
+Statement 3: Poor lighting around bender station
+Statement 4: Calibration tool worn out
+Statement 5: Lack of clear ownership
+Statement 6: Scratches or dents affect positioning
+'''
+st.code(p5code1, language=None)
+
 
 col1, col2, col3, col4, col5, col6 = st.columns(6)
 with col1:
-    man = st.text_input("Man", key=0)
+    man = st.number_input("Man", value=None, step=0, key=0)
     
 with col2:
-    method = st.text_input("Method", key=1)
+    method = st.number_input("Method", value=None, step=0, key=1)
 
 with col3:
-    material = st.text_input("Material", key=2)
+    material = st.number_input("Material", value=None, step=0, key=2)
 
 with col4:
-    machine = st.text_input("Machine", key=3)
+    machine = st.number_input("Machine", value=None, step=0, key=3)
 
 with col5:
-    environment = st.text_input("Environment", key=4)
+    environment = st.number_input("Environment", value=None, step=0, key=4)
 
 with col6:
-    management = st.text_input("Management", key=5)
+    management = st.number_input("Management", value=None, step=0, key=5)
 
 
 
@@ -56,53 +69,68 @@ if st.button("Submit Answers", key="5a", type="primary"):
     else:
         st.error("Your answer is incorrect. Please try again.")
 
+#DIRECT CAUSE
 if st.session_state.activity5a:
         
     st.markdown("---")  # Horizontal line
 
     st.markdown("### Direct Cause")
     st.markdown("Pick the most direct cause.")
-    st.selectbox("label", [man, method, material, machine, environment, management])
+    answerP5Q2 = st.selectbox("label",
+                 ["Setup steps not followed consistently",
+                  "Inconsistent tube positioning",
+                  "Poor lighting around bender station",
+                  "Calibration tool worn out",
+                  "Lack of clear ownership",
+                  "Scratches or dents affect positioning"]
+                )
 
     if "activity5b" not in st.session_state:
         st.session_state.activity5b = False
     # Button - submit code
     if st.button("Submit Answers", key="5b", type="primary"):
 
-        if True:
+        if answerP5Q2 == "Calibration tool worn out":
             st.session_state.activity5b = True
             st.success("You got it!")
         else:
             st.error("Your answer is incorrect. Please try again.")
 
+#5 WHYS
 if st.session_state.activity5b:
 
     st.markdown("---")  # Horizontal line
 
     st.markdown("### 5 Whys")
 
-    st.markdown("Read this excerpt and use it to complete the activity below.")
-    st.text_area("Example Exerpt",
-                "This is where the A3 story/scenario will go for the users to read.")
+    st.markdown("Based on the problem statement, put the 5 Why statements in the correct order.")
+    st.markdown("##### Problem Statement")
+
+    p5code2 = '''
+    In the Tube Bender #2 station, parts are being rejected due to
+    bend angles that exceed the specification tolerance (±2°).
+    '''
+    st.code(p5code2, language=None)
+
     st.markdown("Order these statements in the correct order.")
 
 
-    st.selectbox("statement 1", [1,2,3,4,5])
-    st.selectbox("statement 2", [1,2,3,4,5])
-    st.selectbox("statement 3", [1,2,3,4,5])
-    st.selectbox("statement 4", [1,2,3,4,5])
-    st.selectbox("statement 5", [1,2,3,4,5])
+    why3 = st.selectbox("Because they haven't been inspected or replaced in a long time", [1,2,3,4,5])
+    why2 = st.selectbox("Because the clamps are damaged and the calibration tool is worn out", [1,2,3,4,5])
+    why5 = st.selectbox("Because there is no preventative maintenance plan for Tube Bender #2, including calibration tools and clamps", [1,2,3,4,5])
+    why1 = st.selectbox("Because the bending equipment is not applying the correct force or angle", [1,2,3,4,5])
+    why4 = st.selectbox("Because there's no scheduled preventative maintenance for this equipment", [1,2,3,4,5])
 
     if "activity5c" not in st.session_state:
         st.session_state.activity5c = False
     # Button - submit code
     if st.button("Submit Answers", key="5c", type="primary"):
 
-        if True:
+        if why1==1 and why2==2 and why3==3 and why4==4 and why5==5:
             st.session_state.activity5c = True
             st.success("You got it!")
         else:
-            st.error("Your answer is incorrect. Please try again.")
+            st.error("One or more of your answer is incorrect. Please try again.")
 
 if st.session_state.activity5c:
     st.markdown("---")

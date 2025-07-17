@@ -11,8 +11,8 @@ st.markdown("### TASK 3: BREAKDOWN")
 st.markdown("Quiz Style - 5 multiple choice questions")
 
 answerP3Q1 = st.pills(
-    "Q1",
-    options=["a1","a2","a3"],
+    "Which part of A3 project does the Breakdown section focus on?",
+    options=["Brainstorming solutions","Tracking project milestones","Analyzing the problem in smaller parts", "Writing the final report"],
     selection_mode="single"
 )
 answerP3Q2 = st.pills(

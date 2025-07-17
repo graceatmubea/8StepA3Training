@@ -13,10 +13,15 @@ st.markdown("*Picture of Chart 1*")
 st.markdown("*Picture of Chart 2*")
 st.markdown("*Picture of Chart 3*")
 
-st.markdown("Looking at the 3 different results displayed above, decide whether each project is able to be closed and why. "
-            "Please use words from the wordbank provided below in your explanation.")
+st.markdown("Looking at the 3 different results displayed above, decide whether each project is able to be closed (yes/no). Why? ")
+st.markdown(" Use words from the wordbank provided below in your 1-2 sentence explanation.")
 
-st.text_area("Wordbank", "word1   word2   word3")
+
+st.markdown(":blue-badge[Baseline] :green-badge[Improvement] :violet-badge[Implementation] :orange-badge[Standard]")
+
+st.text_area("Scenario 1", height=68)
+st.text_area("Scenario 2", height=68)
+st.text_area("Scenario 3", height=68)
 
 st.markdown("To check your answers, please show them to the training proctor for verification.")
 

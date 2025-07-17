@@ -10,26 +10,20 @@ if st.button(label="Return to Home Page", key=None, help=None, type="secondary",
 
 # Title
 st.markdown("# TASK 1: HEADER")
+st.markdown("*Offline Activity*")
 st.write("When you've finished arranging the pieces into their proper sections in front of you, please enter the corresponding code into the boxes below.")
 
-st.markdown("#### Enter the secret code below: (ANSWER IS 1,2,3)")
-
-left, middle, right = st.columns([3, 3, 3], vertical_alignment="top")
+st.markdown("#### Enter the secret code below: (ANSWER IS 123)")
 
 #Enter code
-with left:
-    code1 = st.number_input("First number", min_value=0)
-with middle:
-    code2 = st.number_input("Second number", min_value=0)
-with right:
-    code3 = st.number_input("Third number", min_value=0)
+code1 = st.number_input("", min_value=0)
 
 if "activity1" not in st.session_state:
     st.session_state.activity1 = False
 
 # Button - submit code
 if st.button("Submit Answers", type="primary"):
-    if code1 == 1 and code2 == 2 and code3 == 3:
+    if code1 == 123:
         st.session_state.activity1 = True
         st.success("You got it!")
     else:
@@ -39,7 +33,7 @@ if st.button("Submit Answers", type="primary"):
 if st.session_state.activity1:
     st.markdown("---")
     st.write("One more thing before we move to the next task. Please answer the question below.")
-    st.write("What information should NOT be included in the A3 header?")
+    #st.write("What information should NOT be included in the A3 header?")
 
     answerP1Q1 = "Coach's Date of Birth"
     headerQ1 = st.radio(
