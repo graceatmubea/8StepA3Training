@@ -8,7 +8,10 @@ if st.button("Return to Home Page"):
 
 
 st.markdown("### TASK 4: TARGET SETTING")
-st.markdown("Fill-in-the-blank activity")
+st.markdown("#### Fill-in-the-blank activity")
+st.markdown("Fill in the blanks below to form the complete target goal statment.")
+
+st.divider()
 
 p4code1 = '''
 Reduce bend angle ______ from 58% to 10% of Bender #2 _____,
@@ -16,7 +19,7 @@ at the Bending Operation by June 30, 2025. This ____________
 is expected to _______ total scrap in the tube forming line from
 4.5% to 3.9%
 '''
-st.code(p4code1, language=None)
+#st.code(p4code1, language=None)
 
 col1, col2, col3, col4, col5 = st.columns([3, 2, 3, 2, 5], vertical_alignment="top")
 
