@@ -100,6 +100,8 @@ if st.session_state.activity5b:
     p5code2 = '''
     In the Tube Bender #2 station, parts are being rejected due to
     bend angles that exceed the specification tolerance (±2°).
+
+    Direct Cause: Calibration tool worn out
     '''
     st.code(p5code2, language=None)
 
