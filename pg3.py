@@ -8,7 +8,7 @@ if st.button("Return to Home Page"):
 
 
 st.markdown("### TASK 3: BREAKDOWN")
-st.markdown("Quiz Style - 5 multiple choice questions")
+st.markdown("Answer the 5 multiple choice questions below.")
 
 answerP3Q1 = "To understand and isolate where the problem occurs"
 pg3Q1 = st.radio(
@@ -99,6 +99,6 @@ if st.button("Submit Answers", type="primary"):
 # Follow up question
 if st.session_state.activity3:
     st.markdown("---")
-    st.write("Please note: *insert statement about break down problem*")
+    st.write(":dart: *It's important that the goal aligns with the identified problem because if it doesn't, the actions taken may not solve the actual problem!*")
     if st.button("PROCEED TO NEXT TASK", type="primary"):
             st.switch_page("pg4.py")

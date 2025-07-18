@@ -9,7 +9,7 @@ if st.button(label="Return to Home Page", key=None, help=None, type="secondary",
     st.switch_page("pgTitle.py")
 
 # Title
-st.markdown("# TASK 1: HEADER")
+st.markdown("### TASK 1: HEADER")
 st.markdown("*Offline Activity*")
 st.write("When you've finished arranging the pieces into their proper sections in front of you, please enter the corresponding code into the boxes below.")
 

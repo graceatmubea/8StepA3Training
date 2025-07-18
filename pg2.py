@@ -28,7 +28,7 @@ if st.button("Submit Answers", type="primary"):
 # Follow up question
 if st.session_state.activity2:
     st.markdown("---")
-    st.write(":dart: Measurable data, graphs, or photos of the issue should be included in the current condition to make it useful.")
+    st.write(":dart: *Measurable data, graphs, or photos of the issue should be included in the current condition to make it useful.*")
     if st.button("PROCEED TO NEXT TASK", type="primary"):
             st.switch_page("pg3.py")
     

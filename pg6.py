@@ -17,6 +17,7 @@ if "activity6a" not in st.session_state:
 #START PAGE
 st.markdown("### TASK 6: DEVELOP COUNTERMEASURES")
 
+st.markdown("Fill out the matrix below. (Tip: Add up the values in every row!)")
 #HEADER ROW
 col1r1, col2r1, col3r1, col4r1, col5r1, col6r1, col7r1 = st.columns([8,2,2,2,2,2,1], vertical_alignment="bottom")
 with col1r1:
@@ -45,7 +46,7 @@ with col1r2:
 with col2r2:
     st.markdown("2")
     st.markdown("1")
-    st.number_input("", value=None, step=0, label_visibility="collapsed", key=1)
+    st.text_input("", value=None, label_visibility="collapsed", key=1)
     st.markdown("0")
     st.markdown("1")
 with col3r2:
@@ -55,7 +56,7 @@ with col3r2:
     st.markdown("2")
     st.markdown("2")
 with col4r2:
-    st.number_input("", value=None, step=0, label_visibility="collapsed", key=3)
+    st.text_input("", value=None, label_visibility="collapsed", key=3)
     st.markdown("2")
     st.markdown("3")
     st.markdown("3")
@@ -65,16 +66,16 @@ with col5r2:
     st.markdown("3")
     st.markdown("2")
     st.markdown("2")
-    st.number_input("", value=None, step=0, label_visibility="collapsed", key=4)
+    st.text_input("", value=None, label_visibility="collapsed", key=4)
 with col6r2:
     st.markdown("3")
     st.markdown("2")
     st.markdown("3")
-    st.number_input("", value=None, step=0, label_visibility="collapsed", key=5)
+    st.text_input("", value=None, label_visibility="collapsed", key=5)
     st.markdown("1")
 with col7r2: 
     st.markdown("14")
-    st.number_input("", value=None, step=0, label_visibility="collapsed", key=6)
+    st.text_input("", value=None, label_visibility="collapsed", key=6)
     st.markdown("11")
     st.markdown("10")
     st.markdown("9")
@@ -120,7 +121,7 @@ if st.session_state.activity6b:
     '''
     st.code(p5code1, language=None)
 
-    pg6Code = st.number_input("Enter the code on the back of the hint below.", value=None, step=0)
+    pg6Code = st.number_input("Enter the code on the back of the hint and hit enter.", value=None, step=0)
 
     if pg6Code == 1916:
         st.success("*Good work agents. We knew you would find it. Make sure to write down or take a picture of the information you found!*")

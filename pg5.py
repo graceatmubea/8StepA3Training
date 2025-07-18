@@ -57,7 +57,7 @@ if "activity5a" not in st.session_state:
 # Button - submit code
 if st.button("Submit Answers", key="5a", type="primary"):
 
-    if True:
+    if man==2 and method==1 and material==4 and machine==6 and environment==3 and management==5:
         st.session_state.activity5a = True
         st.success("You got it!")
     else:
