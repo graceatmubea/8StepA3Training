@@ -42,10 +42,11 @@ with col5:
     st.markdown("**at the Bending Operation by June 30, 2025.**")
 
 #line2
-col1r2, col2r2, col3r2, col4r2, col5r2, col6r2 = st.columns([1, 4, 2, 4, 2, 8], vertical_alignment="top")
+col1r2, col2r2, col3r2, col4r2, col5r2 = st.columns([1, 4, 2, 4, 10], vertical_alignment="top")
 
 with col1r2:
     st.markdown("**This**")
+    
 with col2r2:
     st.selectbox("improvement", options=pg4List, index=None, key="b3", label_visibility="collapsed")
 
@@ -56,10 +57,8 @@ with col4r2:
     st.selectbox("reduce", options=pg4List, index=None, key="b4", label_visibility="collapsed")
 
 with col5r2:
-    st.markdown("**total scrap in the**")
+    st.markdown("**total scrap in the tube forming line from 4.5% to 3.9%.**")
 
-with col6r2:
-    st.markdown("**tube forming line from 4.5% to 3.9%.**")
 
 
 

@@ -12,7 +12,7 @@ st.markdown("Answer the 5 multiple choice questions below.")
 
 answerP3Q1 = "To understand and isolate where the problem occurs"
 pg3Q1 = st.radio(
-    "1. What is the main purpose of the 'Breakdown the Problem' Step in the A3 Process?",
+    "Q1. What is the main purpose of the 'Breakdown the Problem' Step in the A3 Process?",
     ["To test different solutions",
     "To define the ideal future state",
     "To understand and isolate where the problem occurs",
@@ -21,7 +21,7 @@ pg3Q1 = st.radio(
 )
 answerP3Q2 = "Pareto Chart"
 pg3Q2 = st.radio(
-    "2. Which tool is most commonly used to prioritize defects during the breakdown phase?",
+    "Q2. Which tool is most commonly used to prioritize defects during the breakdown phase?",
     ["Fishbone Diagram",
     "Pareto Chart",
     "Control Chart",
@@ -30,7 +30,7 @@ pg3Q2 = st.radio(
 )
 answerP3Q3 = "The Point of Occurrence (PoO) of the defect"
 pg3Q3 = st.radio(
-    "3. What is typically identified after creating a process flow diagram in the breakdown step?",
+    "Q3. What is typically identified after creating a process flow diagram in the breakdown step?",
     ["The budget of the project",
     "The root cause of the problem",
     "The Point of Occurrence (PoO) of the defect",
@@ -39,7 +39,7 @@ pg3Q3 = st.radio(
 )
 answerP3Q4 = "The defect with the highest frequency or cost"
 pg3Q4 = st.radio(
-    "4. When reviewing defects, which of the following should be prioritized?",
+    "Q4. When reviewing defects, which of the following should be prioritized?",
     ["The defect with the most visibility to leadership",
     "The defect with the lowest cost impact",
     "The defect with the highest frequency or cost",
@@ -48,7 +48,7 @@ pg3Q4 = st.radio(
 )
 answerP3Q5 = "The point in the process with the highest impact on the issue"
 pg3Q5 = st.radio(
-    "5. What does 'Priority Point' refer to during the Breakdown step?",
+    "Q5. What does 'Priority Point' refer to during the Breakdown step?",
     ["The team member leading the step",
     "The final result of the project",
     "The department where the problem started",

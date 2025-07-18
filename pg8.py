@@ -10,7 +10,7 @@ if st.button("Return to Home Page"):
 st.markdown("### TASK 8: MONITOR RESULTS")
 
 st.markdown("Looking at the 3 different scenarios below, decide whether each project is able to be closed. Why?")
-st.markdown("*Use keywords from the wordbank provided below in your 1-2 sentence explanation.*")
+st.markdown("*Use keywords from the wordbank provided below in your 1-2 sentence explanation. Use the space below to help you brainstorm and plan your answers.*")
 
 
 st.markdown(":blue-badge[Baseline] :green-badge[Improvement] :violet-badge[Implementation] :orange-badge[Standard]")

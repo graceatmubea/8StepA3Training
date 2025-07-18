@@ -17,7 +17,7 @@ if "activity6a" not in st.session_state:
 #START PAGE
 st.markdown("### TASK 6: DEVELOP COUNTERMEASURES")
 
-st.markdown("Fill out the matrix below. (Tip: Add up the values in every row!)")
+st.markdown("Fill out the matrix below. *Tip: Add up the values in every row!*")
 #HEADER ROW
 col1r1, col2r1, col3r1, col4r1, col5r1, col6r1, col7r1 = st.columns([8,2,2,2,2,2,1], vertical_alignment="bottom")
 with col1r1:

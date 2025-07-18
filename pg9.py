@@ -28,7 +28,7 @@ pg9Q2 = st.radio(
     "Work Instruction"],
     index=None, key="pg9Q2"
 )
-answerP9Q3 = "The Point of Occurrence (PoO) of the defect"
+answerP9Q3 = "To reflect updated risks and controls in the process"
 pg9Q3 = st.radio(
     "3. Why is it important to update the PFMEA after implementing improvements?",
     ["To inform the HR department",
@@ -70,6 +70,6 @@ if st.button("Submit Answers", type="primary"):
 # Follow up question
 if st.session_state.activity9:
     st.markdown("---")
-    st.write("Please note: *insert statement about break down problem*")
+    st.write(":dart: *Standardizing is important to support consistency and sustainability of improvements made during the A3 Project.*")
     if st.button("COMPLETE MISSION", type="primary"):
             st.switch_page("pgEnd.py")
