@@ -37,6 +37,15 @@ pg9Q3 = st.radio(
     "To reduce training time"],
     index=None, key="pg9Q3"
 )
+answerP9Q4 = "To reflect updated risks and controls in the process"
+pg9Q4 = st.radio(
+    "3. I need to complete a...",
+    ["Summary Sheet",
+    "Requirements Compliance",
+    "Standardization List",
+    "Lessons Learned"],
+    index=None, key="pg9Q4"
+)
 
 if "activity9" not in st.session_state:
     st.session_state.activity9 = False

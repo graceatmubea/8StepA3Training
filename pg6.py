@@ -95,11 +95,13 @@ if st.session_state.activity6a:
     st.write("One more thing before we move to the next task. Please answer the question below.")
     #st.write("What information should NOT be included in the A3 header?")
 
-    answerP6Q1 = "It must directly attack the root cause"
+    answerP6Q1 = "answer2"
     pg6Q1 = st.radio(
-        "What makes a countermeasure effective?",
-        ["It must be clearly visible on the A3", "It must directly attack the root cause",
-         "It must be the fastest to implement", "All of the above"],
+        "What is the difference between 'Develop Countermeasures' and 'Implement Countermeasures'?",
+        ["answer1",
+         "answer2",
+         "answer3",
+         "All of the above"],
         index=None, key="pg6Q1"
     )
 

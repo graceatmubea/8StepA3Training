@@ -28,9 +28,25 @@ if st.button("Submit Answers", type="primary"):
 # Follow up question
 if st.session_state.activity2:
     st.markdown("---")
-    st.write(":dart: *Measurable data, graphs, or photos of the issue should be included in the current condition to make it useful.*")
-    if st.button("PROCEED TO NEXT TASK", type="primary"):
-            st.switch_page("pg3.py")
+    st.write("One more question before we move to the next task. Please answer the question below.")
+    #st.write("What information should NOT be included in the A3 header?")
+
+    answerP2Q1 = "Ultimate Goal"
+    pg2q1 = st.radio(
+        "What is the given statement the definition for?",
+        ["Standard Goal",
+         "Ultimate Goal"],
+        index=None, key="pg2q1"
+    )
+
+    if pg2q1 == answerP2Q1:
+        st.success("You are correct! Click the button below to move to the next task.")
+        if st.button("PROCEED TO NEXT TASK", type="primary"):
+            st.switch_page("pg.py")
+    elif pg2q1 == None:
+        st.markdown("Please select an answer")
+    else:
+        st.error("Incorrect. Please try again.")
     
 
 

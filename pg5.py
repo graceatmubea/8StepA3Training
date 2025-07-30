@@ -23,7 +23,11 @@ st.markdown("### TASK 5: ROOT CAUSE ANALYSIS")
 #FISHBONE
 st.markdown("Given the statement bank and the diagram below, enter the statement number into the corresponding box.")
 st.markdown("##### Fishbone Diagram")
-st.image("pg5pic.png")
+
+if st.session_state.activity5b:
+    st.image("pg5picSOLUTION.png")
+else:
+    st.image("pg5pic.png")
 
 st.markdown("##### Statement Bank")
 p5code1 = '''
@@ -67,9 +71,11 @@ if st.button("Submit Answers", key="5a", type="primary"):
 if st.session_state.activity5a:
         
     st.markdown("---")  # Horizontal line
-
     st.markdown("### Direct Cause")
-    answerP5Q2 = st.selectbox("Identify the most direct cause.",
+    st.markdown(":star: Direct cause, is the *MAIN* cause of variation in a process or product that is most responsible for the problem being investigated. It is the dominant cause among many potential contributors, and targeting it yields the maximum impact on solving the issue.")
+    #Ishikawa option (using all 6 causes, select "direct" or "indirect")
+    st.markdown("*ISHIKAWA MATRIX*")
+    answerP5Q2 = st.selectbox("Given the problem statement in the fishbone diagram above, identify the most direct cause.",
                  ["Setup steps not followed consistently",
                   "Inconsistent tube positioning",
                   "Poor lighting around bender station",
@@ -93,6 +99,7 @@ if st.session_state.activity5b:
     st.markdown("---")  # Horizontal line
 
     st.markdown("### 5 Whys")
+    st.markdown(":star: Remember: Identifying a single root cause is ideal for clarity and focus, but in some cases, multiple root causes may exist and need to be addressed to fully solve the problem.")
 
     st.markdown("Based on the problem statement, put the 5 Why statements in the correct order.")
     st.markdown("##### Problem Statement")
@@ -127,5 +134,6 @@ if st.session_state.activity5b:
 if st.session_state.activity5c:
     st.markdown("---")
     st.write(":exclamation: A root cause and a symptom are **NOT** the same! A sympton is the visible effect, and the root cause is the underlying reason for the problem.")
+    st.image("pg5pic2.png")
     if st.button("PROCEED TO NEXT TASK", type="primary"):
             st.switch_page("pg6.py")

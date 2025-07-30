@@ -13,5 +13,5 @@ pg = st.navigation([
     st.Page("pg8.py", title="8. monitor results"),
     st.Page("pg9.py", title="9. standardize & share"),
     st.Page("pgEnd.py", title="Final", icon=":material/favorite:"),
-], position='hidden')
+], position='sidebar')
 pg.run()
