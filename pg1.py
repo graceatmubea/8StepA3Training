@@ -35,11 +35,11 @@ if st.session_state.activity1:
     st.write("One more thing before we move to the next task. Please answer the question below.")
     #st.write("What information should NOT be included in the A3 header?")
 
-    answerP1Q1 = "Coach's Date of Birth"
+    answerP1Q1 = "The name on your ID badge"
     headerQ1 = st.radio(
-        "What information should NOT be included in the A3 header?",
-        ["Project Owner's Name", "Coach's Date of Birth",
-         "Project Start & End Date", "Project Area/Location"],
+        "What name should be written on the header of the A3?",
+        ["T. Muhr", "TomTom",
+         "Tom", "Tom Muhr"],
         index=None, key="header_Q1"
     )
 

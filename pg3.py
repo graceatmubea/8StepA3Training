@@ -42,7 +42,7 @@ pg3Q3 = st.radio(
 st.image("pg3pic.png")
 answerP3Q4 = "Clamp Marks:   **20%**"
 pg3Q4 = st.radio(
-    "Q4. Verify the project breakdown above. If there is an error, select it below. Assume everything else is correct.",
+    "Q4. Verify the project breakdown above. Find the **mathematical** error. See the pareto charts for a hint.",
     ["Welding:   **25%**",
     "Tube Bender #3:   **30%**",
     "Clamp Marks:   **20%**",
@@ -55,7 +55,7 @@ if "activity3" not in st.session_state:
 
 # Button - submit code
 if st.button("Submit Answers", type="primary"):
-    #boolean to test Q1-Q5 for correctness
+    #boolean to test Q1-Q4 for correctness
     bool1 = False
     bool2 = False
     bool3 = False
@@ -80,7 +80,7 @@ if st.button("Submit Answers", type="primary"):
          st.error("Question 4 is incorrect.")
          
 
-    if bool1 and bool2 and bool3 and bool4 and bool5:
+    if bool1 and bool2 and bool3 and bool4:
         st.session_state.activity3 = True
         st.success("You got it!")
 

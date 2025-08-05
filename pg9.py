@@ -79,6 +79,6 @@ if st.button("Submit Answers", type="primary"):
 # Follow up question
 if st.session_state.activity9:
     st.markdown("---")
-    st.write(":dart: *Standardizing is important to support consistency and sustainability of improvements made during the A3 Project.*")
+    st.write(":dart: *Are you ready to test your A3 skills?*")
     if st.button("COMPLETE MISSION", type="primary"):
             st.switch_page("pgEnd.py")
