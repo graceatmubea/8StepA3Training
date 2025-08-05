@@ -2,7 +2,7 @@ import streamlit as st
 
 
 # Set up the Streamlit page
-st.set_page_config(page_title="Root Cause Analysis", layout="centered")
+st.set_page_config(page_title="Root Cause Analysis", layout="wide")
 if st.button("Return to Home Page"):
     st.switch_page("pgTitle.py")
 
@@ -25,9 +25,9 @@ st.markdown("Given the statement bank and the diagram below, enter the statement
 st.markdown("##### Fishbone Diagram")
 
 if st.session_state.activity5b:
-    st.image("pg5picSOLUTION.png")
+    st.image("pg5picSOLUTION.png", width=5)
 else:
-    st.image("pg5pic.png")
+    st.image("pg5pic.png", width=800)
 
 st.markdown("##### Statement Bank")
 p5code1 = '''
@@ -61,7 +61,7 @@ if "activity5a" not in st.session_state:
 # Button - submit code
 if st.button("Submit Answers", key="5a", type="primary"):
 
-    if man==2 and method==1 and material==4 and machine==6 and environment==3 and management==5:
+    if man==2 and method==1 and material==6 and machine==4 and environment==3 and management==5:
         st.session_state.activity5a = True
         st.success("You got it!")
     else:
@@ -75,19 +75,28 @@ if st.session_state.activity5a:
     st.markdown(":star: Direct cause, is the *MAIN* cause of variation in a process or product that is most responsible for the problem being investigated. It is the dominant cause among many potential contributors, and targeting it yields the maximum impact on solving the issue.")
     #Ishikawa option (using all 6 causes, select "direct" or "indirect")
     st.markdown("*ISHIKAWA MATRIX*")
-    answerP5Q2 = st.selectbox("Given the problem statement in the fishbone diagram above, identify the most direct cause.",
-                 ["Setup steps not followed consistently",
-                  "Inconsistent tube positioning",
-                  "Poor lighting around bender station",
-                  "Calibration tool worn out",
-                  "Lack of clear ownership",
-                  "Scratches or dents affect positioning"], index=None
-                )
+    left, right = st.columns([0.85, 0.15])
+    with left:
+        st.image("pg5pic2.png")
+    with right:
+        ishi1 = st.segmented_control("Man", ["Direct", "Indirect"], selection_mode="single",
+                                     default=None, key=6, label_visibility="hidden")
+        ishi2 = st.segmented_control("Method", ["Direct", "Indirect"], selection_mode="single",
+                                     default=None, key=7, label_visibility="hidden")
+        ishi3 = st.segmented_control("Material", ["Direct", "Indirect"], selection_mode="single",
+                                     default=None, key=8, label_visibility="hidden")
+        ishi4 = st.segmented_control("Machine", ["Direct", "Indirect"], selection_mode="single",
+                                     default=None, key=9, label_visibility="hidden")
+        ishi5 = st.segmented_control("Environment", ["Direct", "Indirect"], selection_mode="single",
+                                     default=None, key=10, label_visibility="hidden")
+        ishi6 = st.segmented_control("Management", ["Direct", "Indirect"], selection_mode="single",
+                                     default=None, key=11, label_visibility="hidden")
+
     
     # Button - submit code
     if st.button("Submit Answers", key="5b", type="primary"):
 
-        if answerP5Q2 == "Calibration tool worn out":
+        if True:
             st.session_state.activity5b = True
             st.success("You got it!")
         else:
@@ -134,6 +143,6 @@ if st.session_state.activity5b:
 if st.session_state.activity5c:
     st.markdown("---")
     st.write(":exclamation: A root cause and a symptom are **NOT** the same! A sympton is the visible effect, and the root cause is the underlying reason for the problem.")
-    st.image("pg5pic2.png")
+    st.image("pg5pic3.png")
     if st.button("PROCEED TO NEXT TASK", type="primary"):
             st.switch_page("pg6.py")

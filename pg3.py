@@ -39,13 +39,14 @@ pg3Q3 = st.radio(
     "The final countermeasure"],
     index=None, key="pg3Q3"
 )
-answerP3Q4 = "20%"
+st.image("pg3pic.png")
+answerP3Q4 = "Clamp Marks:   **20%**"
 pg3Q4 = st.radio(
-    "Q4. Verify the following project breakdown. If there is an error, select it below.",
-    ["%",
-    "%",
-    "20%",
-    "No errors found."],
+    "Q4. Verify the project breakdown above. If there is an error, select it below. Assume everything else is correct.",
+    ["Welding:   **25%**",
+    "Tube Bender #3:   **30%**",
+    "Clamp Marks:   **20%**",
+    "No errors found"],
     index=None, key="pg3Q4"
 )
 
