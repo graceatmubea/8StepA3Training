@@ -96,46 +96,46 @@ if st.session_state.activity5a:
                                      default=None, key=11, label_visibility="hidden")
         st.markdown(" ")
 
-with center:
-    # Button - submit code
-    if st.button("Submit Answers", key="5b", type="primary"):
-        bool1 = False
-        bool2 = False
-        bool3 = False
-        bool4 = False
-        bool5 = False
-        bool6 = False
-        
-
-        if ishi1 == "Indirect":
-            bool1 = True
-        else:
-            st.error("Category: Man is incorrect.")
-        if ishi2 == "Indirect":
-            bool2 = True
-        else:
-            st.error("Category: Method is incorrect.")
-        if ishi3 == "Indirect":
-            bool3 = True
-        else:
-            st.error("Category: Material is incorrect.")
-        if ishi4 == "Direct":
-            bool4 = True
-        else:
-            st.error("Category: Machine is incorrect.")
-        if ishi5 == "Indirect":
-            bool5 = True
-        else:
-            st.error("Category: Environment is incorrect.")
-        if ishi6 == "Indirect":
-            bool6 = True
-        else:
-            st.error("Category: Management is incorrect.")
+    with center:
+        # Button - submit code
+        if st.button("Submit Answers", key="5b", type="primary"):
+            bool1 = False
+            bool2 = False
+            bool3 = False
+            bool4 = False
+            bool5 = False
+            bool6 = False
             
 
-        if bool1 and bool2 and bool3 and bool4 and bool5 and bool6:
-            st.session_state.activity5b = True
-            st.success("You got it!")
+            if ishi1 == "Indirect":
+                bool1 = True
+            else:
+                st.error("Category: Man is incorrect.")
+            if ishi2 == "Indirect":
+                bool2 = True
+            else:
+                st.error("Category: Method is incorrect.")
+            if ishi3 == "Indirect":
+                bool3 = True
+            else:
+                st.error("Category: Material is incorrect.")
+            if ishi4 == "Direct":
+                bool4 = True
+            else:
+                st.error("Category: Machine is incorrect.")
+            if ishi5 == "Indirect":
+                bool5 = True
+            else:
+                st.error("Category: Environment is incorrect.")
+            if ishi6 == "Indirect":
+                bool6 = True
+            else:
+                st.error("Category: Management is incorrect.")
+                
+
+            if bool1 and bool2 and bool3 and bool4 and bool5 and bool6:
+                st.session_state.activity5b = True
+                st.success("You got it!")
         
 
 #5 WHYS
