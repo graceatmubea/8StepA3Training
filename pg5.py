@@ -76,7 +76,7 @@ if st.session_state.activity5a:
     st.markdown("### Direct Cause")
     st.markdown(":star: Direct cause, is the *MAIN* cause of variation in a process or product that is most responsible for the problem being investigated. It is the dominant cause among many potential contributors, and targeting it yields the maximum impact on solving the issue.")
     #Ishikawa option (using all 6 causes, select "direct" or "indirect")
-    left, center, right = st.columns([0.1, 0.65, 0.2], vertical_alignment="top")
+    left, center, right = st.columns([0.1, 0.65, 0.2], vertical_alignment="center")
     with center:
         st.image("pg5pic2.png", use_container_width=True)
     with right:

@@ -38,8 +38,8 @@ if st.session_state.activity1:
     answerP1Q1 = "Tom Muhr"
     headerQ1 = st.radio(
         "What name should be written on the header of the A3?",
-        ["T. Muhr", "TomTom",
-         "Tom", "Tom Muhr"],
+        ["Johnny B", "Jon",
+         "J.Boone", "Jonathan Boone"],
         index=None, key="header_Q1"
     )
 
