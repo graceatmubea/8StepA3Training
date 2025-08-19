@@ -81,7 +81,7 @@ if st.session_state.activity5a:
         st.image("pg5pic2.png", use_container_width=True)
     with right:
         st.markdown("**Evaluation of Root Cause**")
-        st.markdown("")
+        #st.markdown("")
         ishi1 = st.segmented_control("Man", ["Direct", "Indirect"], selection_mode="single",
                                      default=None, key=6, label_visibility="hidden")
         ishi2 = st.segmented_control("Method", ["Direct", "Indirect"], selection_mode="single",
