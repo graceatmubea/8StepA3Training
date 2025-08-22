@@ -7,7 +7,7 @@ if st.button("Return to Home Page"):
     st.switch_page("pgTitle.py")
 
 
-st.markdown("### TASK 8: MONITOR RESULTS")
+st.markdown("### TASK 7: MONITOR RESULTS")
 
 st.markdown("Looking at the 3 different scenarios below, decide whether each project is able to be closed. Why?")
 st.markdown("*Use keywords from the wordbank provided below in your 1-2 sentence explanation. Use the space below to help you brainstorm and plan your answers.*")
@@ -30,13 +30,13 @@ st.divider()
 
 st.markdown("To check your answers, please show them to the training proctor for verification.")
 
-answerP8Q1 = st.number_input("Enter the code to move on to the final task: (answer is 123)", value=None, step=0)
+answerP8Q1 = st.text_input("Enter the code to move on to the final task:", value=None)
 if "activity8" not in st.session_state:
     st.session_state.activity8 = False
 
 # Button - submit code
 if st.button("Submit Answers", type="primary"):
-    if answerP8Q1 == 123:
+    if answerP8Q1 == "SEVEN":
         st.session_state.activity8 = True
         st.success("You got it!")
     else:
@@ -45,7 +45,7 @@ if st.button("Submit Answers", type="primary"):
 # Follow up question
 if st.session_state.activity8:
     st.markdown("---")
-    st.write("Please note: *insert statement about monitor results*")
+    st.write(":exclamation: Do not close projects for speed or deadlines. Only close when the project is ready and complete.")
     if st.button("PROCEED TO NEXT TASK", type="primary"):
             st.switch_page("pg9.py")
 

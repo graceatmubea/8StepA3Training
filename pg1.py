@@ -9,7 +9,7 @@ if st.button(label="Return to Home Page", key=None, help=None, type="secondary",
     st.switch_page("pgTitle.py")
 
 # Title
-st.markdown("### TASK 1: HEADER")
+st.markdown("### TASK 0: HEADER")
 st.markdown("*Offline Activity*")
 st.write("When you've finished arranging the pieces into their proper sections in front of you, please enter the corresponding code into the boxes below.")
 
@@ -35,7 +35,7 @@ if st.session_state.activity1:
     st.write("One more thing before we move to the next task. Please answer the question below.")
     #st.write("What information should NOT be included in the A3 header?")
 
-    answerP1Q1 = "Tom Muhr"
+    answerP1Q1 = "Jonathan Boone"
     headerQ1 = st.radio(
         "What name should be written on the header of the A3?",
         ["Johnny B", "Jon",

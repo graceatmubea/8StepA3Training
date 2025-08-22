@@ -7,7 +7,7 @@ if st.button("Return to Home Page"):
     st.switch_page("pgTitle.py")
 
 
-st.markdown("### TASK 9: STANDARDIZE & SHARE")
+st.markdown("### TASK 8: STANDARDIZE & SHARE")
 st.markdown("Quiz Style - 3 multiple choice questions")
 
 answerP9Q1 = "To ensure improvements are sustained over time"

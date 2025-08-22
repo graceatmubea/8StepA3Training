@@ -15,7 +15,7 @@ if "activity6a" not in st.session_state:
     st.session_state.activity6a = False
 
 #START PAGE
-st.markdown("### TASK 6: DEVELOP COUNTERMEASURES")
+st.markdown("### TASK 5: DEVELOP COUNTERMEASURES")
 
 st.markdown("Fill out the matrix below. *Tip: Add up the values in every row!*")
 #HEADER ROW
@@ -95,13 +95,13 @@ if st.session_state.activity6a:
     st.write("One more thing before we move to the next task. Please answer the question below.")
     #st.write("What information should NOT be included in the A3 header?")
 
-    answerP6Q1 = "answer2"
+    answerP6Q1 = "Development is for brainstorming possible solutions and implementation chooses one solution and plans it out"
     pg6Q1 = st.radio(
         "What is the difference between 'Develop Countermeasures' and 'Implement Countermeasures'?",
-        ["answer1",
-         "answer2",
-         "answer3",
-         "All of the above"],
+        ["Development is for sketching and implementation is the technical drawing",
+         "Development is for brainstorming possible solutions and implementation chooses one solution and plans it out",
+         "Development is creating detailed action plans and implementation is the finished product",
+         "All of these are correct"],
         index=None, key="pg6Q1"
     )
 
@@ -123,9 +123,9 @@ if st.session_state.activity6b:
     '''
     st.code(p5code1, language=None)
 
-    pg6Code = st.number_input("Enter the code on the back of the hint and hit enter.", value=None, step=0)
+    pg6Code = st.text_input("Enter the code on the back of the hint and hit enter.", value=None)
 
-    if pg6Code == 1916:
-        st.success("*Good work agents. We knew you would find it. Make sure to write down or take a picture of the information you found!*")
+    if pg6Code == "08672":
+        st.success("*Good work agents. We knew you would find it. Make sure to write down or keep the information you found!*")
         if st.button("PROCEED TO NEXT TASK", type="primary", key="pg6B2"):
             st.switch_page("pg7.py")

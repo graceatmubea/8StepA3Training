@@ -7,7 +7,7 @@ if st.button("Return to Home Page"):
     st.switch_page("pgTitle.py")
 
 
-st.markdown("### TASK 4: TARGET SETTING")
+st.markdown("### TASK 3: TARGET SETTING")
 st.markdown("#### Fill-in-the-blank activity")
 st.markdown("Fill in the blanks below to form the complete target goal statment.")
 

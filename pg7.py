@@ -11,13 +11,14 @@ if "activity7a" not in st.session_state:
 if "activity7b" not in st.session_state:
     st.session_state.activity7b = False
 
-st.markdown("### TASK 7: IMPLEMENT COUNTERMEASURES")
+st.markdown("### TASK 6: IMPLEMENT COUNTERMEASURES")
 
 
 pg7List = ["address gaps through leader coaching", "ownership execution weekly", "To review", "during FMDS meetings and"]
 
 st.markdown("Use your secret intel and arrange these words into the proper action structure to unlock the next activity. ")
 pg7Q1 = st.multiselect("Put these sections in the correct order to write the missing countermeasure.", pg7List, placeholder="")
+st.markdown("")
 
 if st.button("Submit Answers", key="7a", type="primary"):
     if pg7Q1 == ["To review","ownership execution weekly","during FMDS meetings and","address gaps through leader coaching"]:

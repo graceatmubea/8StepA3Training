@@ -7,7 +7,7 @@ if st.button("Return to Home Page"):
     st.switch_page("pgTitle.py")
 
 
-st.markdown("### TASK 2: CURRENT CONDITION")
+st.markdown("### TASK 1: CURRENT CONDITION")
 st.markdown("Using the diagram and information provided below, determine the missing value.")
 
 st.image("pg2pic.jpg", width=1800)
@@ -29,7 +29,7 @@ if st.button("Submit Answers", type="primary"):
 if st.session_state.activity2:
     st.markdown("---")
     st.write("One more question before we move to the next task. Please answer the question below.")
-    #st.write("What information should NOT be included in the A3 header?")
+    st.code("The long-term target or ideal outcome you aim to achieve. It represents the optimal state of the process once all improvements have been successfully implemented. It is ambitious but achievable.", language=None, wrap_lines=True)
 
     answerP2Q1 = "Ultimate Goal"
     pg2q1 = st.radio(
@@ -42,7 +42,7 @@ if st.session_state.activity2:
     if pg2q1 == answerP2Q1:
         st.success("You are correct! Click the button below to move to the next task.")
         if st.button("PROCEED TO NEXT TASK", type="primary"):
-            st.switch_page("pg.py")
+            st.switch_page("pg3.py")
     elif pg2q1 == None:
         st.markdown("Please select an answer")
     else:
