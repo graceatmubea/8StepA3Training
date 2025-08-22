@@ -13,7 +13,7 @@ st.markdown("### TASK 0: HEADER")
 st.markdown("*Offline Activity*")
 st.write("When you've finished arranging the pieces into their proper sections in front of you, please enter the corresponding code into the boxes below.")
 
-st.markdown("#### Enter the secret code below: (ANSWER IS 123)")
+st.markdown("#### Enter the secret code below:")
 
 #Enter code
 code1 = st.number_input("", min_value=0)
@@ -23,7 +23,7 @@ if "activity1" not in st.session_state:
 
 # Button - submit code
 if st.button("Submit Answers", type="primary"):
-    if code1 == 123:
+    if code1 == 315768294:
         st.session_state.activity1 = True
         st.success("You got it!")
     else:
