@@ -30,7 +30,7 @@ st.divider()
 
 st.markdown("To check your answers, please show them to the training proctor for verification.")
 
-answerP8Q1 = st.text_input("Enter the code to move on to the final task:", value=None)
+answerP8Q1 = st.text_input("Enter the code (case-sensitive) to move on to the final task:", value=None)
 if "activity8" not in st.session_state:
     st.session_state.activity8 = False
 
