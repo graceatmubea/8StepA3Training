@@ -29,7 +29,7 @@ with col2:
     if st.session_state.activity5b:
         st.image("pg5picSOLUTION.png", width=900)
     else:
-        st.image("pg5pic.png", width=900)
+        st.image("pg5pic.png","To fullscreen the image, hover your cursor over the image & click the icon near the top right corner.", width=900)
 
     st.markdown("##### Statement Bank")
     p5code1 = '''
