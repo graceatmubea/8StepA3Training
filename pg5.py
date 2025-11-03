@@ -26,7 +26,7 @@ st.markdown("### TASK 4: ROOT CAUSE ANALYSIS")
 st.markdown("Given the statement bank and the diagram below, enter the statement number into the corresponding box.")
     
 
-columnL, columnR = st.columns([0.7,0.3],vertical_alignment="center")
+columnL, columnR = st.columns([0.65,0.35],vertical_alignment="center")
 with columnL:
     st.markdown("##### Fishbone Diagram")
     st.caption("To fullscreen the image, hover your cursor over the image & click the icon near the top right corner.")
