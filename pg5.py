@@ -170,7 +170,7 @@ if st.session_state.activity5b:
         why3 = st.selectbox("Because they haven't been inspected or replaced in a long time", [1,2,3,4,5], index=None, width=700)
         why2 = st.selectbox("Because the clamps are damaged and the calibration tool is worn out", [1,2,3,4,5], index=None, width=700)
         why5 = st.selectbox("Because there is no preventative maintenance plan for Tube Bender #2, including calibration tools and clamps", [1,2,3,4,5], index=None, width=700)
-        why1 = st.selectbox("Because the bending equipment is not applying the correct force or angle", [1,2,3,4,5], index=None, width=700)
+        why1 = st.selectbox("The bending equipment is not applying the correct force or angle", [1,2,3,4,5], index=None, width=700)
         why4 = st.selectbox("Because there's no scheduled preventative maintenance for this equipment", [1,2,3,4,5], index=None, width=700)
 
 
