@@ -21,14 +21,15 @@ if "activity5c" not in st.session_state:
 st.markdown("### TASK 4: ROOT CAUSE ANALYSIS")
 
 #FISHBONE
-col1, col2, col3 = st.columns([0.3, 0.5, 0.3])
-with col2:
-    st.markdown("Given the statement bank and the diagram below, enter the statement number into the corresponding box.")
-    st.markdown("##### Fishbone Diagram")
-    st.caption("To fullscreen the image, hover your cursor over the image & click the icon near the top right corner.")
+#col1, col2, col3 = st.columns([0.3, 0.5, 0.3])
+#with col2:
+st.markdown("Given the statement bank and the diagram below, enter the statement number into the corresponding box.")
+    
 
 columnL, columnR = st.columns([0.5,0.5])
 with columnL:
+    st.markdown("##### Fishbone Diagram")
+    st.caption("To fullscreen the image, hover your cursor over the image & click the icon near the top right corner.")
     if st.session_state.activity5b:
         st.image("pg5picSOLUTION.png", width=900)
     else:
