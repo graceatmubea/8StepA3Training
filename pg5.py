@@ -25,12 +25,15 @@ col1, col2, col3 = st.columns([0.3, 0.5, 0.3])
 with col2:
     st.markdown("Given the statement bank and the diagram below, enter the statement number into the corresponding box.")
     st.markdown("##### Fishbone Diagram")
+    st.caption("To fullscreen the image, hover your cursor over the image & click the icon near the top right corner.")
 
+columnL, columnR = st.columns([0.5,0.5])
+with columnL:
     if st.session_state.activity5b:
         st.image("pg5picSOLUTION.png", width=900)
     else:
-        st.image("pg5pic.png","To fullscreen the image, hover your cursor over the image & click the icon near the top right corner.", width=900)
-
+        st.image("pg5pic.png", width=900)
+with columnR:
     st.markdown("##### Statement Bank")
     p5code1 = '''
     Statement 1: No standard procedure for angle setup
