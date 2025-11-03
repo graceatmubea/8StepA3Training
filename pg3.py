@@ -39,7 +39,7 @@ pg3Q3 = st.radio(
     "The final countermeasure"],
     index=None, key="pg3Q3"
 )
-st.image("pg3pic.png")
+st.image("pg3pic.png","To fullscreen the image, hover your cursor over the image & click the icon near the top right corner.")
 answerP3Q4 = "Clamp Marks:   **20%**"
 pg3Q4 = st.radio(
     "Q4. Verify the project breakdown above. Find the **mathematical** error. See the pareto charts for a hint.",
